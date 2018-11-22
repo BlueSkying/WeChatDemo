@@ -8,6 +8,36 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "images/nav_icon_a02@2x.png",
+        "iconPath": "images/nav_icon_a01@2x.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "邻里",
+        "selectedIconPath": "images/nav_icon_b02@2x.png",
+        "iconPath": "images/nav_icon_b01@2x.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城",
+        "selectedIconPath": "images/nav_icon_c02@2x.png",
+        "iconPath": "images/nav_icon_c01@2x.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+       "selectedIconPath": "images/nav_icon_d02@2x.png",
+       "iconPath": "images/nav_icon_d01@2x.png"
+      }
+    ],
+    "color": "#666666",
+    "selectedColor": "#2BB2C1"
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
