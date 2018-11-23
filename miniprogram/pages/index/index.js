@@ -36,11 +36,6 @@ Page({
     })
   },
   
-  testAlert: function(e){
-    wx.showToast({
-      title: '弹出测试',
-    })
-  },
 
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
