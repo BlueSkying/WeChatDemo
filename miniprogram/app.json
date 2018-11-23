@@ -6,7 +6,8 @@
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/chooseLib/chooseLib",
+    "pages/mine/mine"
   ],
   "tabBar": {
     "list": [
@@ -29,7 +30,7 @@
         "iconPath": "images/nav_icon_c01@2x.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/mine/mine",
         "text": "我的",
        "selectedIconPath": "images/nav_icon_d02@2x.png",
        "iconPath": "images/nav_icon_d01@2x.png"

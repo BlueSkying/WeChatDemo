@@ -1,0 +1,5 @@
+
+.upbanner{
+ width:kwidth;
+ height: 300rpx;
+}

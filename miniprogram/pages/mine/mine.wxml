@@ -1,0 +1,6 @@
+<view class="container">
+  <view class='upbanner'>
+    <image class='upbanner' src="{{headImgUrl}}" mode="scaleToFill"  bindtap='headImgClick'>
+    </image>
+  </view>
+</view>
