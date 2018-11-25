@@ -1,0 +1,4 @@
+<view class='container'>
+    <web-view class='webview' src='{{h5Url}}'>
+    </web-view>
+</view>

@@ -10,6 +10,8 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      userInfoUrl: 'http://openapi.justbon.cn:8392/members/member',     userJiadouUrl:'http://openapi.justbon.cn/api/scarlettBean/queryScarlettBeam',
+    }
   }
 })

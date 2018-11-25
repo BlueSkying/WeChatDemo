@@ -3,3 +3,123 @@
  width:kwidth;
  height: 300rpx;
 }
+
+.head_image{
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  top: 10rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.nikeTitle{
+  position: absolute;
+  width: kwidth;
+  height: 20px;
+  left: 0;
+  top: 140rpx;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: '#666666';
+  font-size: 15px
+}
+
+.jiadouBgImg{
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  top: 190rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.jiadouImg{
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  bottom: 0;
+  margin: auto;
+  width: 9px;
+  height: 15px;
+}
+
+.jiadouCount{
+  position: absolute;
+  left: 16px;
+  top: 2px;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+.arrow{
+  position: absolute;
+  width: 12px;
+  height: 13px;
+  top: 4px;
+  right: 0px;
+}
+
+.resourceTitle{
+  position: absolute;
+  width: kwidth;
+  height: 20;
+  left: 0;
+  top: 250rpx;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  color: '#999999';
+  font-size: 12px;
+}
+
+.scrollview{
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+}
+
+.info_cell{
+  height: 45px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #dadada;
+}
+
+.cellIcon{
+  margin-left: 15px;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.cellTitle{
+  margin-left: 20px;
+  top: 10px;
+  width: 80px;
+  height: 15px;
+  color: '#666666';
+  font-size: 13;
+}
+
+.arrow{
+  margin-right: 15px;
+  margin-top: 15px;
+  width: 8px;
+  height: 14px;
+}

@@ -1,6 +1,19 @@
 <view class="container">
-  <view class='upbanner'>
-    <image class='upbanner' src="{{headImgUrl}}" mode="scaleToFill"  bindtap='headImgClick'>
-    </image>
-  </view>
+  <image class='upbanner' src='{{headBgUrl}}' mode="scaleToFill">
+       <image class='head_image' src='{{headImgUrl}}' mode="scaleToFill" bindtap='headImgClick'></image>
+       <text class='nikeTitle'>{{nikeName}}</text>
+       <image class='jiadouBgImg' src='{{jiadouBgUrl}}'>
+          <image class='jiadouImg' src='{{jiadouUrl}}'></image>
+          <text class='jiadouCount'>{{jiadouCount}}</text>
+          <image class='arrow' src='{{jiadouArrowUrl}}'></image>
+       </image>
+       <text class='resourceTitle'>{{resourceName}}</text>
+  </image>
+  <scroll-view class='scrollview'>
+      <view class='info_cell' wx:for='{{mineListInfo}}' wx:key='{{item.text}}' data-key='{{index}}' bindtap='cellClick'>
+         <image class='cellIcon' src='{{item.icon}}'></image>
+         <text class='cellTitle'>{{item.text}}</text>
+         <image class='arrow' src='{{itemArrowUrl}}'></image>
+      </view>
+  </scroll-view>
 </view>
