@@ -8,7 +8,8 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/mine/mine",
-    "pages/shopMail/shopMail"
+    "pages/shopMail/shopMail",
+    "pages/navBar/navBar"
   ],
   "tabBar": {
     "list": [
@@ -46,6 +47,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "通马生活",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
   }
 }

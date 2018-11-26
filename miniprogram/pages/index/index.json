@@ -1,9 +1,6 @@
 
- {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#2BB2C1",
-    "navigationBarTitleText": "通马幸福生活",
-    "navigationBarTextStyle": "white"
+{
+  "usingComponents":{
+    "navbar" : "../navBar/navBar"
   }
-
+}

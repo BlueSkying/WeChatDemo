@@ -9,8 +9,11 @@ App({
         traceUser: true,
       })
     }
-
+    
     this.globalData = {
+      navHeight:0,
+      kwidth:0,
+      kheight:0,
       userInfoUrl: 'http://openapi.justbon.cn:8392/members/member',     userJiadouUrl:'http://openapi.justbon.cn/api/scarlettBean/queryScarlettBeam',
     }
   }

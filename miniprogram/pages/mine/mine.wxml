@@ -1,4 +1,5 @@
 <view class="container">
+  <navbar page-name='我的'> </navbar>
   <image class='upbanner' src='{{headBgUrl}}' mode="scaleToFill">
        <image class='head_image' src='{{headImgUrl}}' mode="scaleToFill" bindtap='headImgClick'></image>
        <text class='nikeTitle'>{{nikeName}}</text>
