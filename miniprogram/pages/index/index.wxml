@@ -1,5 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-  <navbar page-name='首页' showScan='true' > </navbar>
+  <navbar id='scanNav' page-name='首页' showScan='true' bindaction='scanClick'> </navbar>
   
 </view>

@@ -9,6 +9,17 @@ Page({
     takeSession: false,
     requestResult: ''
   },
+  
+  scanClick: function (e) {
+    wx.navigateTo({
+      url: '../scan/scan',
+    })
+  },
+
+  onReady:function(){
+    this.scan = this.selectComponent("#scanNav");
+    
+  },
 
   onLoad: function() {
     if (!wx.cloud) {
@@ -17,7 +28,7 @@ Page({
       })
       return
     }
-
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -35,7 +46,6 @@ Page({
       }
     })
   },
-  
 
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {

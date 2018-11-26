@@ -9,7 +9,8 @@
     "pages/chooseLib/chooseLib",
     "pages/mine/mine",
     "pages/shopMail/shopMail",
-    "pages/navBar/navBar"
+    "pages/navBar/navBar",
+    "pages/scan/scan"
   ],
   "tabBar": {
     "list": [

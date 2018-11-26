@@ -1,0 +1,3 @@
+<view class='container'>
+   <navbar page-name='扫描' showBack='true'> </navbar>
+</view>

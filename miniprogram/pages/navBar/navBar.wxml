@@ -6,7 +6,7 @@
 <block wx:else>
 <view class='navBar'>
   <block wx:if="{{showScan}}">
-   <view class='navLeftView' wx:if="{{showScan}}">
+   <view class='navLeftView' bindtap='scanClick' wx:if="{{showScan}}">
       <image class='navLeftScanImg' src='../../images/in-scan-code@2x.png' bindtap='scanClick'>
       </image>
    </view>

@@ -1,5 +1,7 @@
 <view class='container'>
     <navbar page-name='我的'> </navbar>
-    <!-- <web-view class='webview' src='{{h5Url}}'>
-    </web-view> -->
+    <view class='bgView'>
+        <web-view class='webview' src='{{h5Url}}'>
+        </web-view>
+    </view>
 </view>

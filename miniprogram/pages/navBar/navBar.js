@@ -25,7 +25,7 @@ Component({
   methods:{
     // 扫描
     scanClick: function(){
-       
+      this.triggerEvent("action");
     },
 
     //  返回
