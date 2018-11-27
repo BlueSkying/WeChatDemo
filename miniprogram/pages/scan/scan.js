@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    img:'../../images/my_head.png'
+  },
+  
+  scan:function(){
+    wx.scanCode({
+      success:(res)=>{
+        this.setData({
+          img:res.result
+        })
+      },
+      fail:(res)=>{
+          console.log(res);
+      }
+    })
   },
 
   /**

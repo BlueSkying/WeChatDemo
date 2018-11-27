@@ -1,13 +1,40 @@
 //index.js
 const app = getApp()
-
+var network = require('../utils/network.js')
 Page({
   data: {
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    bnrUrl:[{
+      "imgUrl":"../../images/homebannerd@2x.png"
+      }, {
+        "imgUrl": "../../images/homebannerd@2x.png"
+      }, {
+        "imgUrl": "../../images/homebannerd@2x.png"
+      }, {
+        "imgUrl": "../../images/homebannerd@2x.png"
+      }],
+    btnUpArray:[{
+        "funcName":"一键开门","realName": "../../images/homebannerd@2x.png"
+    }, {
+        "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
+      }, {
+        "funcName": "一键开门","realName": "../../images/homebannerd@2x.png"
+      }, {
+        "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
+      }],
+    btnDownArray:[{
+          "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
+        }, {
+          "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
+        }, {
+        "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
+        }, {
+          "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
+      }]
   },
   
   scanClick: function (e) {
@@ -44,6 +71,38 @@ Page({
           })
         }
       }
+    })
+    this.getProjectAds()
+    this.getUserBtn()
+
+  },
+  
+  getProjectAds:function(){
+    let thas = this;
+    network.request(app.globalData.userProjectAds, 'post', {'type': 'index', 'projectId':'38562569'}, function (res) {
+      // console.log(res)
+      thas.setData({
+        bnrUrl : res['ads']
+      })
+    }, function () {
+      wx.showToast({
+        title: '加载数据失败',
+      })
+    })
+  },
+  
+  getUserBtn:function(){
+    let thas = this;
+    network.request(app.globalData.userBtnUrl, 'get','', function (res) {
+      var dataArray = res['top']
+      thas.setData({
+        btnUpArray : dataArray.slice(0,4),
+        btnDownArray: dataArray.slice(4,8),
+      })
+    }, function () {
+      wx.showToast({
+        title: '加载数据失败',
+      })
     })
   },
 

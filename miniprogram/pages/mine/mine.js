@@ -66,7 +66,7 @@ Page({
 
   getUserInfo:function(){
     let thas = this;
-    network.request(app.globalData.userInfoUrl, {'sCommandName': 'getMember', 'sInput': {'ID':'1285858633'}},function(res){
+    network.request(app.globalData.userInfoUrl,'post',{'sCommandName': 'getMember', 'sInput': {'ID':'1285858633'}},function(res){
       console.log(res)
       thas.setData({
         nikeName: res['Item']['sNickName'],
@@ -81,7 +81,7 @@ Page({
   
   getJiadouInfo: function () {
     let thas = this;
-    network.request(app.globalData.userJiadouUrl, { 'requestData': { 'userId': '1285858633' } }, function (res) {
+    network.request(app.globalData.userJiadouUrl,'post',{ 'requestData': { 'userId': '1285858633' } }, function (res) {
       console.log(res)
       thas.setData({
         jiadouCount: res['resultData']['total'] + '个',

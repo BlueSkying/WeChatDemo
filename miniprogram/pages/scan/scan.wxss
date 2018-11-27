@@ -1,0 +1,22 @@
+.bgView{
+  position: absolute;
+  top: 64px;
+  flex: 1;
+  flex-direction: column;
+}
+.image{
+  height: 400px;
+  width: 688rpx;
+  margin: 0 30rpx;
+  border: 2rpx solid;
+  border-radius: 5px;
+}
+
+button{
+  margin: 0 10rpx;
+  width: 100%;
+}
+
+#scan{
+  width: 730rpx;
+}

@@ -11,10 +11,10 @@ App({
     }
     
     this.globalData = {
-      navHeight:0,
-      kwidth:0,
-      kheight:0,
-      userInfoUrl: 'http://openapi.justbon.cn:8392/members/member',     userJiadouUrl:'http://openapi.justbon.cn/api/scarlettBean/queryScarlettBeam',
+      userJiadouUrl: 'http://openapi.justbon.cn/api/scarlettBean/queryScarlettBeam',
+      userInfoUrl: 'http://openapi.justbon.cn:8392/members/member',       
+      userBtnUrl: 'http://weblink.justbon.com/getPicByRoleIdAndType.action?roleid=role_30',
+      userProjectAds: 'https://jcp.justbon.com/api/ads',
     }
   }
 })

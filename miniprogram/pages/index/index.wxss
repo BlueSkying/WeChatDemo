@@ -7,6 +7,68 @@ page {
   justify-content: flex-start;
 }
 
+.bgView{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 64px;
+  background: #f0f0f0;
+}
+
+.u-wrp-bnr{
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.u-img-slide{
+  width: 100%;
+  height: inherit;
+}
+
+.blankView{
+  width: 100%;
+  height: 10px;
+}
+
+.btnBgView{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 82px;
+}
+
+.pages-item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 82px;
+  background-color: #fff;
+  border: #ddd solid 1px;
+}
+
+.pages-icon{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+  margin: 5px auto;
+}
+
+.pages-title{
+  align-content: center;
+  text-align: center;
+  font-size: 12px;
+  margin: -5px auto;
+  font-weight: bolder;
+}
+
 .userinfo, .uploader, .tunnel {
   height: 140rpx;
   width: 100%;

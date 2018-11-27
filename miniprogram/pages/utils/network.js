@@ -4,8 +4,8 @@
 // message:进度条的提示信息
 // success:成功的回调函数
 // fail：失败的回调
-function request(url, params, success, fail) {
-  this.requestLoading(url, params, "", success, fail)
+function request(url, method, params, success, fail) {
+  this.requestLoading(url,method, params, "", success, fail)
 }
 // 展示进度条的网络请求
 // url:网络请求的url
@@ -13,7 +13,7 @@ function request(url, params, success, fail) {
 // message:进度条的提示信息
 // success:成功的回调函数
 // fail：失败的回调
-function requestLoading(url, params, message, success, fail) {
+function requestLoading(url, method, params, message, success, fail) {
   console.log(params)
   wx.showNavigationBarLoading()
   if (message != "") {
@@ -29,7 +29,7 @@ function requestLoading(url, params, message, success, fail) {
       'version': '3.0.0',
       'clientId':'10101',
     },
-    method: 'post',
+    method: method,
     success: function (res) {
       wx.hideNavigationBarLoading()
       if (message != "") {

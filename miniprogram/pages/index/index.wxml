@@ -1,5 +1,33 @@
 <!--index.wxml-->
 <view class="container">
   <navbar id='scanNav' page-name='首页' showScan='true' bindaction='scanClick'> </navbar>
-  
+<view class='bgView'>
+    <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+      <block wx:for="{{bnrUrl}}" wx:for-index="index">
+        <swiper-item>
+          <image src='{{item.imgUrl}}' class='u-img-slide' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='blankView'>
+    </view>
+    <view class='btnBgView'>
+        <block wx:for='{{btnUpArray}}' wx:for-index='index'>
+          <view class='pages-item'>
+           <image class='pages-icon' src='{{item.realName}}'></image>
+           <text class='pages-title'>{{item.funcName}}</text>
+          </view>
+        </block>
+    </view>
+    <view class='btnBgView'>
+        <block wx:for='{{btnDownArray}}' wx:for-index='index'>
+          <view class='pages-item'>
+           <image class='pages-icon' src='{{item.realName}}'></image>
+           <text class='pages-title'>{{item.funcName}}</text>
+          </view>
+        </block>
+    </view>
+    <view class='blankView'>
+    </view>
+</view>
 </view>

@@ -1,3 +1,9 @@
 <view class='container'>
    <navbar page-name='扫描' showBack='true'> </navbar>
+   <view class='bgView'>
+         <image class='image' src='{{img}}' bindtap='imgClick'>
+         </image>
+         <button type='primary' bindtap='scan' id='scan'>扫一扫
+         </button>
+   </view>
 </view>
