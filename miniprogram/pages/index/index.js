@@ -1,6 +1,8 @@
 //index.js
 const app = getApp()
 var network = require('../utils/network.js')
+var longtitude = ''
+var latitude = ''
 Page({
   data: {
     avatarUrl: './user-unlogin.png',
@@ -44,8 +46,19 @@ Page({
   },
 
   onReady:function(){
-    this.scan = this.selectComponent("#scanNav");
-    
+    let thas = this;
+    wx.getLocation({
+      success: function (res) {
+        console.log(res)
+        longtitude = String(res.longitude);
+        console.log(longtitude)
+        latitude = String(res.latitude)
+        console.log(latitude)
+        thas.getWeather()
+      },
+    })
+    console.log(longtitude)
+    console.log(latitude) 
   },
 
   onLoad: function() {
@@ -98,6 +111,22 @@ Page({
       thas.setData({
         btnUpArray : dataArray.slice(0,4),
         btnDownArray: dataArray.slice(4,8),
+      })
+    }, function () {
+      wx.showToast({
+        title: '加载数据失败',
+      })
+    })
+  },
+  
+  getWeather:function(){
+    let thas = this;
+    var location = longtitude + ',' + latitude
+    console.log(location)
+    network.request(app.globalData.weatherUrl, 'post', { 'location': (longtitude + ',' + latitude)}, function (res) {
+      console.log(res)
+      thas.setData({
+       
       })
     }, function () {
       wx.showToast({
