@@ -10,6 +10,9 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
+    city:'',
+    weather:'',
+    limit:'',
     bnrUrl:[{
       "imgUrl":"../../images/homebannerd@2x.png"
       }, {
@@ -36,7 +39,8 @@ Page({
         "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
         }, {
           "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
-      }]
+      }],
+    shopMailArray:[]  
   },
   
   scanClick: function (e) {
@@ -57,8 +61,6 @@ Page({
         thas.getWeather()
       },
     })
-    console.log(longtitude)
-    console.log(latitude) 
   },
 
   onLoad: function() {
@@ -87,7 +89,7 @@ Page({
     })
     this.getProjectAds()
     this.getUserBtn()
-
+    this.getProjectHotAds()
   },
   
   getProjectAds:function(){
@@ -126,7 +128,9 @@ Page({
     network.request(app.globalData.weatherUrl, 'post', { 'location': (longtitude + ',' + latitude)}, function (res) {
       console.log(res)
       thas.setData({
-       
+        city:res['city'],
+        weather: res['weather'] + res['temperature'],
+        limit:'今日限行  ' + res['xx']['xxnum']
       })
     }, function () {
       wx.showToast({
@@ -134,6 +138,20 @@ Page({
       })
     })
   },
+
+  getProjectHotAds: function () {
+    let thas = this;
+    network.request(app.globalData.userProjectHotAds, 'post', {'projectId': '38562569'}, function (res) {
+      console.log(res)
+      thas.setData({
+        shopMailArray: res['ad']
+      })
+    }, function () {
+      wx.showToast({
+        title: '加载数据失败',
+      })
+    })
+  }, 
 
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {

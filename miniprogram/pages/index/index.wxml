@@ -2,6 +2,7 @@
 <view class="container">
   <navbar id='scanNav' page-name='首页' showScan='true' bindaction='scanClick'> </navbar>
 <view class='bgView'>
+    <!-- 轮播图片 -->
     <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
       <block wx:for="{{bnrUrl}}" wx:for-index="index">
         <swiper-item>
@@ -9,8 +10,19 @@
         </swiper-item>
       </block>
     </swiper>
+    <!-- 空白间距 -->
     <view class='blankView'>
     </view>
+    <!-- 天气层 -->
+    <view class='weatherView'>
+        <text class='weatherText'>{{city}}</text>
+        <text class='weatherText'>{{weather}}</text>
+        <text class='weatherText'>{{limit}}</text>
+    </view>
+    <!-- 空白间距 -->
+    <view class='blankView'>
+    </view>
+    <!-- 按钮1层 -->
     <view class='btnBgView'>
         <block wx:for='{{btnUpArray}}' wx:for-index='index'>
           <view class='pages-item'>
@@ -19,6 +31,7 @@
           </view>
         </block>
     </view>
+    <!-- 按钮2层 -->
     <view class='btnBgView'>
         <block wx:for='{{btnDownArray}}' wx:for-index='index'>
           <view class='pages-item'>
@@ -27,7 +40,16 @@
           </view>
         </block>
     </view>
+    <!-- 空白层 -->
     <view class='blankView'>
     </view>
+    <!-- 最下层广告页面 -->
+    <scroll-view class='scrollview'>
+      <view class='info_cell' wx:for='{{shopMailArray}}' wx:key='{{item.mainTitle}}' data-key='{{index}}' bindtap='cellClick'>
+         <text class='shopmaincell_title'>{{item.mainTitle}}</text>
+         <text class='shopmaincell_subtitle'>{{item.subTitle}}</text>
+         <image class='shopmainImg' src='{{item.imgUrl}}'></image>
+      </view>
+  </scroll-view>
 </view>
 </view>

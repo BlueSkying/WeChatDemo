@@ -26,7 +26,7 @@ function requestLoading(url, method, params, message, success, fail) {
     data: params,
     header: {
       'content-Type': 'application/json',
-      'version': '3.0.0',
+      'version': '150',
       'clientId':'10101',
     },
     method: method,
