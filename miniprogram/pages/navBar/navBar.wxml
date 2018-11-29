@@ -1,25 +1,20 @@
-<block wx:if='{{isShopMail}}'>
-  <view class='navWhite'>
-     
-  </view>
-</block>
-<block wx:else>
-<view class='navBar'>
-  <block wx:if="{{showScan}}">
-   <view class='navLeftView' bindtap='scanClick' wx:if="{{showScan}}">
-      <image class='navLeftScanImg' src='../../images/in-scan-code@2x.png' bindtap='scanClick'>
-      </image>
-   </view>
-  </block> 
-  <block wx:elseif="{{showBack}}">
-     <view class='navLeftView' wx:if="{{showBack}}">
-      <image class='navLeftBackImg' src='../../images/left_back@2x.png' bindtap='backClick'>
-      </image>
-   </view>
-  </block>
-
-  <view class='navbar-title'>
-       {{pageName}}
+<view class='container'>
+  <view class='navBar'>
+    <block wx:if="{{showScan}}">
+        <image class='navLeftScanImg' src='../../images/in-scan-code@2x.png' bindtap='scanClick'>
+        </image>
+    </block> 
+    <block wx:if="{{showBack}}">
+        <image class='navLeftBackImg' src='../../images/left_back@2x.png' bindtap='backClick'>
+        </image>
+    </block>
+    <view class='navbar-title'>
+        {{pageName}}
+    </view>
+    <block wx:if="{{showScan}}">
+          <image class='arrowImg' src='../../images/in-arrow@2x.png'>
+          </image>
+    </block>
   </view>
 </view>
-</block>
+

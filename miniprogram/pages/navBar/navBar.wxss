@@ -1,57 +1,41 @@
 
-.navWhite{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 40px;
-  color: white;
-}
-
 .navBar{
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  position: relative;
   width: 100%;
   height: 64px;
-  color: white;
-}
-
-.navLeftView{
-  position: absolute;
-  left:0px;
-  top: 0px;
-  width:68px;
-  height: 44px;
+  background-color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
 }
 
 .navLeftScanImg{
-  position: absolute;
-  left: 15px;
-  top: 30px;
+  margin-left: 15px;
+  margin-top: 30px;
   width: 22px;
   height: 22px;
 }
 
 .navLeftBackImg{
-  position: absolute;
-  left: 15px;
-  top: 20px;
+  margin-left: 15px;
+  margin-top: 20px;
   width: 68px;
   height: 44px;
 }
 
 .navbar-title {
-  height: 46px;
-  line-height: 46px;
+  width: 100%;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 100px;
-  right: 100px;
-  z-index: 10;
-  /* background-color: #fff; */
+  margin:auto;
+  margin-top: 28px;
   color: #333;
   font-size: 18px;
+}
+
+.arrowImg{
+  width:10px;
+  height: 10px; 
+  margin: auto;
+  margin-bottom: 18px;
+  align-items: center;
 }
