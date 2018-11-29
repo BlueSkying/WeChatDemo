@@ -10,6 +10,7 @@
 }
 
 .navLeftScanImg{
+  position: absolute;
   margin-left: 15px;
   margin-top: 30px;
   width: 22px;
@@ -17,17 +18,25 @@
 }
 
 .navLeftBackImg{
+  position: absolute;
   margin-left: 15px;
   margin-top: 20px;
   width: 68px;
   height: 44px;
 }
 
-.navbar-title {
+.titleView{
   width: 100%;
-  text-align: center;
-  margin:auto;
-  margin-top: 28px;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar-title {
+  position: relative;
+  text-align: center; 
+  margin-top: 5px;
   color: #333;
   font-size: 18px;
 }
@@ -35,7 +44,5 @@
 .arrowImg{
   width:10px;
   height: 10px; 
-  margin: auto;
-  margin-bottom: 18px;
-  align-items: center;
+  margin-top: 38px;
 }
