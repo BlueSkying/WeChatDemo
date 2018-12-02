@@ -6,6 +6,10 @@ Page({
   },
 
   onLoad: function (options) {
+    var that = this;
+    that.setData({
+      h5Url: options.h5url
+    })
     _webviewUrl = options.webviewUrl;
   },
 

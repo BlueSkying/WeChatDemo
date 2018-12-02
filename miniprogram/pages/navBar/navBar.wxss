@@ -15,6 +15,7 @@
   margin-top: 30px;
   width: 22px;
   height: 22px;
+  z-index: 1;
 }
 
 .navLeftBackImg{
@@ -26,11 +27,13 @@
 }
 
 .titleView{
+  position: fixed;
   width: 100%;
   height: inherit;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 0;
 }
 
 .navbar-title {

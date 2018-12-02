@@ -15,8 +15,9 @@ App({
       userInfoUrl: 'http://openapi.justbon.cn:8392/members/member',       
       userBtnUrl: 'http://weblink.justbon.com/getPicByRoleIdAndType.action?roleid=role_30',
       userProjectAds: 'https://jcp.justbon.com/api/ads',
-      userProjectHotAds: 'http://jcp.justbon.com/api/frontAd',
-      weatherUrl: 'http://api.justbon.com/weather/queryWeatherInfo.json'
+      userProjectHotAds: 'https://jcp.justbon.com/api/frontAd',
+      weatherUrl: 'http://api.justbon.com/weather/queryWeatherInfo.json',
+      houseInfoUrl:'https://jcp.justbon.com/api/commons/getBindHouseInfo',
     }
   }
 })

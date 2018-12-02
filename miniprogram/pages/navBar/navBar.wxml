@@ -1,11 +1,11 @@
 
   <view class='navBar'>
      <block wx:if="{{showScan}}">
-        <view class='titleView'>
-          <text class='navbar-title'>
+        <view class='titleView' >
+          <text class='navbar-title' bindtap='showModal'>
             {{pageName}}
           </text>
-          <image class='arrowImg' src='../../images/in-arrow@2x.png'>
+          <image class='arrowImg' src='../../images/in-arrow@2x.png' bindtap='showModal'>
           </image>
         </view>
     </block>

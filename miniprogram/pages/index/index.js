@@ -5,7 +5,9 @@ var longtitude = ''
 var latitude = ''
 Page({
   data: {
+    navTitle:'生活家',
     avatarUrl: './user-unlogin.png',
+    index:1,
     userInfo: {},
     logged: false,
     takeSession: false,
@@ -13,6 +15,7 @@ Page({
     city:'',
     weather:'',
     limit:'',
+    isShowModal:false,
     bnrUrl:[{
       "imgUrl":"../../images/homebannerd@2x.png"
       }, {
@@ -40,13 +43,45 @@ Page({
         }, {
           "funcName": "一键开门", "realName": "../../images/homebannerd@2x.png"
       }],
-    shopMailArray:[]  
+    shopMailArray:[],
+    houseInfoArray:[],  
   },
   
+  onSlideChangeEnd: function (e) {
+    var that = this;
+    that.setData({
+      index: e.detail.current + 1
+    })
+  },
+
   scanClick: function (e) {
     wx.navigateTo({
       url: '../scan/scan',
     })
+  },
+
+  showModal: function(e){
+    this.getBindHouse()
+  },
+  
+  hide: function(e){
+    this.setData({
+      isShowModal:false
+    })
+  },
+  
+  houseClick: function(e){
+    var index = parseInt(e.currentTarget.dataset.key);
+    let title = this.data.houseInfoArray[index].projectName;
+    this.setData({
+      navTitle:title
+    })
+  },
+
+  onSwiperTap: function(e){
+    let h5url = this.data.bnrUrl[this.data.index].url;
+    <navigator url="../shopMail/shopMail?h5url={{h5url}}">
+    </navigator>
   },
 
   onReady:function(){
@@ -152,6 +187,21 @@ Page({
       })
     })
   }, 
+
+  getBindHouse: function(){
+    let thas = this;
+    network.request(app.globalData.houseInfoUrl, 'post', { 'contactid': '1285858633' }, function (res) {
+      console.log(res)
+      thas.setData({
+        isShowModal: true,
+        houseInfoArray: res['data']
+      })
+    }, function () {
+      wx.showToast({
+        title: '加载数据失败',
+      })
+    })
+  },
 
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {

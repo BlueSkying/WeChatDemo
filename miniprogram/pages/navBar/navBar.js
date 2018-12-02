@@ -23,17 +23,20 @@ Component({
   },
 
   methods:{
+    // 标题弹出选择
+    showModal: function () {
+       this.triggerEvent('show');
+    },
     // 扫描
     scanClick: function(){
-      this.triggerEvent("action");
+       this.triggerEvent("action");
     },
-
     //  返回
     backClick: function(){
       wx.navigateBack({
         delta:1
       })
-    }
+    },
   }
 
 })

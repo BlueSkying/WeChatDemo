@@ -1,9 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <navbar id='scanNav' page-name='首页' showScan='true' bindaction='scanClick'> </navbar>
+  <navbar id='scanNav' page-name='{{navTitle}}' showScan='true' bindaction='scanClick' bindshow='showModal'> </navbar>
 <view class='bgView'>
     <!-- 轮播图片 -->
-    <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <swiper catchtap='onSwiperTap' class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true' bindchange='onSlideChangeEnd'>
       <block wx:for="{{bnrUrl}}" wx:for-index="index">
         <swiper-item>
           <image src='{{item.imgUrl}}' class='u-img-slide' mode='aspectFill'></image>
@@ -52,4 +52,12 @@
       </view>
   </scroll-view>
 </view>
+<!-- 弹出层 -->
+  <view class='darkView' hidden='{{!isShowModal}}' bindtap='hide'>
+  </view>
+  <scroll-view class='houseScrollview' catchtouchmove="ture" hidden='{{!isShowModal}}' bindtap='hide' scroll-y style="width: auto;overflow:hidden;">
+             <view class='houseTitelCell' wx:for='{{houseInfoArray}}' wx:key='{{item.resourceName}}' data-key='{{index}}' bindtap='houseClick'>
+                <text class='houseTitelCell'>{{item.projectName}}</text>
+             </view>
+   </scroll-view>
 </view>
