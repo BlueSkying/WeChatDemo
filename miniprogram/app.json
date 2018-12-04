@@ -10,7 +10,8 @@
     "pages/mine/mine",
     "pages/shopMail/shopMail",
     "pages/navBar/navBar",
-    "pages/scan/scan"
+    "pages/scan/scan",
+    "pages/shopMailDetail/shopMailDetail"
   ],
   "tabBar": {
     "list": [

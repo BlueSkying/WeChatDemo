@@ -1,0 +1,7 @@
+<view class='container'>
+    <navbar page-name='商城'></navbar>
+    <view class='bgView'>
+        <web-view class='webview' src='{{h5Url}}'>
+        </web-view>
+    </view>
+</view>

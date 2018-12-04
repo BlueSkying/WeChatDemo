@@ -2,14 +2,10 @@ var app = getApp()
 var _webviewUrl = null;
 Page({
   data:{
-    h5Url:'http://mall.justbon.com.cn/m/project.html?uid=1285858633&userToken=CA1FC79A7910241C1479B3ABADD1EB2B'
+    h5Url: 'http://mall.justbon.com.cn/m/project.html?uid=1285858633&userToken=CA1FC79A7910241C1479B3ABADD1EB2B'
   },
 
   onLoad: function (options) {
-    var that = this;
-    that.setData({
-      h5Url: options.h5url
-    })
     _webviewUrl = options.webviewUrl;
   },
 

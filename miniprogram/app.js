@@ -18,6 +18,7 @@ App({
       userProjectHotAds: 'https://jcp.justbon.com/api/frontAd',
       weatherUrl: 'http://api.justbon.com/weather/queryWeatherInfo.json',
       houseInfoUrl:'https://jcp.justbon.com/api/commons/getBindHouseInfo',
+      h5Url: 'http://mall.justbon.com.cn/m/project.html?uid=1285858633&userToken=CA1FC79A7910241C1479B3ABADD1EB2B'
     }
   }
 })

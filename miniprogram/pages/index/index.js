@@ -80,8 +80,10 @@ Page({
 
   onSwiperTap: function(e){
     let h5url = this.data.bnrUrl[this.data.index].url;
-    <navigator url="../shopMail/shopMail?h5url={{h5url}}">
-    </navigator>
+    app.globalData.h5Url = h5url;
+    wx.navigateTo({
+      url: '../shopMailDetail/shopMailDetail',
+    })
   },
 
   onReady:function(){
